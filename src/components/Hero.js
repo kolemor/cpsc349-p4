@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 /* First third of the landing page */
 const Hero = () => {
@@ -38,12 +39,12 @@ const Hero = () => {
             </div>
 
             <div>
-              <a
-                href="/signup"
+              <Link
+                to="/signup"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-mint-900 transition duration-200 rounded shadow-md bg-mint-100 hover:bg-mint-50 focus:shadow-outline focus:outline-none"
               >
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
         </div>

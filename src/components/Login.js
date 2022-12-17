@@ -2,8 +2,6 @@ import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import pb from '../pocketBase'
 
-/* Copied straight from project 2, all I've changed is class -> className,
-   everything else still needs to be updated for react and pocketbase integration */
 const Login = ({ setLoggedIn }) => {
   const navigate = useNavigate()
 

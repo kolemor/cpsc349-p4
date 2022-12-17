@@ -24,14 +24,31 @@ const About = () => {
             </section>
 
             <section className="flex flex-col gap-3 items-center justify-center lg:flex-row text-slate-100">
-
+                {/* Michael Card */}
                 <div className="bg-mint-700 rounded-xl border-mint-900 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-mint-100 group">
                     <div className="flex flex-col justify-center items-center gap-10">
                         <div className="flex flex-col items-center gap-6">
-
+                            {/* name and pfp */}
+                            <div className="flex gap-6 items-center">
+                                <img src="https://avatars.githubusercontent.com/u/89877041?v=4" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
+                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Michael Carey</h1>
+                            </div>
+                            <p className="transition duration-200 ease-linear hover:text-mint-100 text-center">Styling and Page Templating</p>
+                            <p className="text-gray-400 italic w-64 h-full transition duration-200 ease-linear hover:text-gray-200 text-center text-sm">I had fun learning and using react</p>
+                        </div>
+                        <a href="https://github.com/kolemor/cpsc349-p4" target="_blank" className="w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-mint-900 transition duration-200 rounded shadow-md bg-mint-100 hover:bg-mint-50 hover:scale-105">
+                            GitHub Repo
+                        </a>
+                    </div>
+                </div>
+                {/* Ethan Safai */}
+                <div className="bg-mint-700 rounded-xl border-mint-900 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-mint-100 group">
+                    <div className="flex flex-col justify-center items-center gap-10">
+                        <div className="flex flex-col items-center gap-6">
+                            {/* name and pfp */}
                             <div className="flex gap-6 items-center">
                                 <img src="/" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
-                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Name</h1>
+                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Ethan Safai</h1>
                             </div>
                             <p className="transition duration-200 ease-linear hover:text-mint-100 text-center">Job Title</p>
                             <p className="text-gray-400 italic w-64 h-full transition duration-200 ease-linear hover:text-gray-200 text-center text-sm">Quote</p>
@@ -41,31 +58,14 @@ const About = () => {
                         </a>
                     </div>
                 </div>
-
+                {/* Karnikaa Velumani*/}
                 <div className="bg-mint-700 rounded-xl border-mint-900 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-mint-100 group">
                     <div className="flex flex-col justify-center items-center gap-10">
                         <div className="flex flex-col items-center gap-6">
-
+                            {/* name and pfp */}
                             <div className="flex gap-6 items-center">
                                 <img src="/" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
-                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Name</h1>
-                            </div>
-                            <p className="transition duration-200 ease-linear hover:text-mint-100 text-center">Job Title</p>
-                            <p className="text-gray-400 italic w-64 h-full transition duration-200 ease-linear hover:text-gray-200 text-center text-sm">Quote</p>
-                        </div>
-                        <a href="/" target="_blank" className="w-64 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-mint-900 transition duration-200 rounded shadow-md bg-mint-100 hover:bg-mint-50 hover:scale-105">
-                            GitHub Repo
-                        </a>
-                    </div>
-                </div>
-
-                <div className="bg-mint-700 rounded-xl border-mint-900 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-mint-100 group">
-                    <div className="flex flex-col justify-center items-center gap-10">
-                        <div className="flex flex-col items-center gap-6">
-
-                            <div className="flex gap-6 items-center">
-                                <img src="/" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
-                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Name</h1>
+                                <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Karnikaa Velumani</h1>
                             </div>
                             <p className="transition duration-200 ease-linear hover:text-mint-100 text-center">Job Title</p>
                             <p className="text-gray-400 italic w-64 h-full transition duration-200 ease-linear hover:text-gray-200 text-center text-sm">Quote</p>
