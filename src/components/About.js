@@ -47,7 +47,7 @@ const About = () => {
                         <div className="flex flex-col items-center gap-6">
                             {/* name and pfp */}
                             <div className="flex gap-6 items-center">
-                                <img src="/" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
+                                <img src="https://avatars.githubusercontent.com/u/63935099?v=4" alt="github profile picture" className="w-16 h-16 rounded-full transition duration-500 ease-out group-hover:rotate-180"></img>
                                 <h1 className="text-2xl font-semibold transition duration-200 ease-linear hover:text-mint-100">Ethan Safai</h1>
                             </div>
                             <p className="transition duration-200 ease-linear hover:text-mint-100 text-center">Job Title</p>

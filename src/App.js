@@ -31,7 +31,7 @@ function App() {
             }
           />
 
-          {/* Home page, the way to get to home currently is clicking GYST in the footer */}
+          {/* Home page */}
           <Route path='/home' element={<Home />} />
 
           {/* About page */}
