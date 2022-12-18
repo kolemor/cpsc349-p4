@@ -16,13 +16,13 @@ const Login = ({ setLoggedIn }) => {
       const password = passwordRef.current.value
 
       // authenticate user
-      await pb.collection('users').authWithPassword(username, password)
+      try {
+        await pb.collection('users').authWithPassword(username, password)
 
-      if (pb.authStore.isValid) {
-        setLoggedIn(pb.authStore.isValid)
+        setLoggedIn(true)
         navigate('/home')
-      } else {
-        alert('Something went wrong!')
+      } catch {
+        alert('Invalid credentials')
       }
     }
   }
