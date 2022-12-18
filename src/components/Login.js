@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import pb from '../pocketBase'
 
@@ -26,6 +26,13 @@ const Login = ({ setLoggedIn }) => {
       }
     }
   }
+
+  // don't allow authenticated users to visit this page
+  useEffect(() => {
+    if (pb.authStore.isValid) {
+      navigate('/home')
+    }
+  }, [])
 
   return (
     <div className='relative'>
