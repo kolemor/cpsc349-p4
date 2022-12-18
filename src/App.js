@@ -9,21 +9,8 @@ import Login from './components/Login'
 import Home from './components/Home'
 import pb from './pocketBase'
 
-const USERNAME = 'admin@test.com'
-const PASSWORD = 'password123'
-
 function App() {
   const [loggedIn, setLoggedIn] = useState(pb.authStore.isValid)
-
-  useEffect(() => {
-    /*Testing PocketBase, seems to work despite recieving an error */
-    const temp = async () => {
-      // const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD)
-      // /* Correctly get what I expect to recieve */
-      // console.log(authData.admin.email)
-    }
-    temp()
-  }, [])
 
   return (
     <Router>
@@ -44,7 +31,7 @@ function App() {
             }
           />
 
-          {/* Home page, the way to get to home currently is clicking GYST in the footer */}
+          {/* Home page */}
           <Route path='/home' element={<Home />} />
 
           {/* About page */}
@@ -58,7 +45,7 @@ function App() {
         </Routes>
 
         {/* Footer */}
-        <Footer />
+        <Footer loggedIn={loggedIn} />
       </div>
     </Router>
   )
