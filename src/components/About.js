@@ -58,7 +58,7 @@ const About = () => {
                         </a>
                     </div>
                 </div>
-                {/* Karnikaa Velumani*/}
+                {/* Karnikaa Velumani */}
                 <div className="bg-mint-700 rounded-xl border-mint-900 border-4 border-solid p-8 flex justify-center items-center transition duration-200 ease-linear hover:scale-105 hover:border-mint-100 group">
                     <div className="flex flex-col justify-center items-center gap-10">
                         <div className="flex flex-col items-center gap-6">
