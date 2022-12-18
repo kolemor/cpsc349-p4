@@ -23,8 +23,8 @@ For an X icon on tasks
 
 ## PocketBase
 Admin Panel\
-http://127.0.0.1:8090/_/\
-\
+http://127.0.0.1:8090/_/
+
 Name: admin@test.com\
 Password: password123
 
