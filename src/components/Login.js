@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import pb from '../pocketBase'
 
@@ -16,16 +16,23 @@ const Login = ({ setLoggedIn }) => {
       const password = passwordRef.current.value
 
       // authenticate user
-      await pb.collection('users').authWithPassword(username, password)
+      try {
+        await pb.collection('users').authWithPassword(username, password)
 
-      if (pb.authStore.isValid) {
-        setLoggedIn(pb.authStore.isValid)
+        setLoggedIn(true)
         navigate('/home')
-      } else {
-        alert('Something went wrong!')
+      } catch {
+        alert('Invalid credentials')
       }
     }
   }
+
+  // don't allow authenticated users to visit this page
+  useEffect(() => {
+    if (pb.authStore.isValid) {
+      navigate('/home')
+    }
+  }, [])
 
   return (
     <div className='relative'>

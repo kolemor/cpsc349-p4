@@ -73,6 +73,16 @@ const Nav = ({ loggedIn, setLoggedIn }) => {
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
+            {loggedIn && (
+              <li>
+                <Link
+                  to='/home'
+                  className='font-medium tracking-wide text-slate-100 transition-colors duration-200 hover:text-mint-100'
+                >
+                  Home
+                </Link>
+              </li>
+            )}
             <li>
               <a
                 href='/#features'

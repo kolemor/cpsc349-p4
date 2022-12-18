@@ -6,8 +6,19 @@ import pb from '../pocketBase'
 
 /* the main page when a user logs in, this will house the tasks */
 const Home = () => {
+  let greeting
+  const hour = new Date().getHours()
+  if (hour < 12) {
+    greeting = 'Good morning'
+  } else if (hour < 18) {
+    greeting = 'Good afternoon'
+  } else {
+    greeting = 'Good evening'
+  }
+
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
+  const [sorted, setSorted] = useState(false)
 
   const addTask = async ({ name, dateOrTime }) => {
     const newTask = await pb
@@ -37,6 +48,16 @@ const Home = () => {
     }
   }
 
+  const sortTasks = () => {
+    if (!sorted) {
+      setTasks((prev) => [...prev.sort((a, b) => a.name.localeCompare(b.name))])
+      setSorted(true)
+    } else {
+      setTasks((prev) => [...prev.sort((a, b) => a.created.localeCompare(b.created))])
+      setSorted(false)
+    }
+  }
+
   useEffect(() => {
     const getTasks = async () => {
       const tasks = await pb.collection('todos').getFullList(200, {
@@ -56,7 +77,23 @@ const Home = () => {
       />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onUpdate={updateTask} onDelete={deleteTask} />
+        <>
+          <hr className='mb-4' />
+          <p className='text-xl font-medium mb-2'>{greeting}, {pb.authStore.model.username}</p>
+          <div className='flex justify-between items-center mb-6'>
+            <p className='text-xl font-medium'>
+              You have {tasks.length} {tasks.length === 1 ? 'task' : 'tasks'}
+            </p>
+            <button
+              onClick={sortTasks}
+              className='bg-mint-50 font-medium px-4 py-2 rounded-md text-lg
+      hover:bg-white transition-colors duration-200 ease-in-out text-mint-900'
+            >
+              {!sorted ? 'Sort A-Z' : 'Undo sort'}
+            </button>
+          </div>
+          <Tasks tasks={tasks} onUpdate={updateTask} onDelete={deleteTask} />
+        </>
       ) : (
         'No Tasks To Show'
       )}
